@@ -52,9 +52,10 @@
       * [wordclustering/sourcedata/keyword](wordclustering/sourcedata/keyword): 各类别包含的主要关键词及权重
       * [wordclustering/sourcedata/result](wordclustering/sourcedata/result): 具体每个好友编号的类别归属、签名分词及主要起作用的关键词
  * 运行文件[process_clustering_results.py](process_clustering_results.py)
-    * 该程序读取[wordclustering/sourcedata/result](wordclustering/sourcedata/result)和[No_NickName_Signature.txt][No_NickName_Signature.txt]两个文件，对聚类进行整理
-    * 该程序输
+    * 该程序读取[wordclustering/sourcedata/result](wordclustering/sourcedata/result)和[No_NickName_Signature.txt](No_NickName_Signature.txt)两个文件，对聚类进行整理
+    * 该程序输出聚类的最终结果文件[cluster_result.txt](cluster_result.txt)
 3. **聚类结果分析**
+
 |  类别号   | 好友数  |
 |  :----:  | :----:  |
 | 0  | 34 | 
@@ -62,5 +63,11 @@
 | 2  | 20 | 
 | 3  | 29  |
 | 未分类  | 455  |
+ * 各类别分析
+    * 第0类主要是和"心"相关的
+    * 第1类主要是和"爱"相关的
+    * 第2类主要是和"人"相关的
+    * 第3类主要是和"要"相关的
+ * 能够分到类别的好友，说明有很多其他好友也有类似的签名；未分类的，要么是没有签名，要么是签名比较有自己的特色导致没有类似签名的好友。大多数好友都没有分到类别，这正是印证了圣经上的几句话：「赛53:6」 我们都如羊走迷，各人偏行己路，...
 
 注：为保护隐私，本项目上传文件的好友昵称均用"\*\*nickName\*\*"代替
