@@ -20,10 +20,10 @@
 |  NickName   | Sex  | Province  | City  | Signature  |
 |  :----:  | :----:  | :----:  | :----:  | :----:  |
 | \*\*nickName\*\*  | 1 | 湖南 | 邵阳 | 盼望着，离回家的路似乎还很漫长，等我，等我 |
-| ...  |...。  |...  |...  |...  |
+| ...  |...  |...  |...  |...  |
 
  * 运行结果会弹出3张图：好友性别分布的饼图、好友省份及城市分布的柱状图、好友签名的词云图
-<div align=center><img width="900" height="500" src="data/好友性别分布.png"/></div>
+<div align=center><img width="900" height="480" src="data/好友性别分布.png"/></div>
 <div align=center><img width="900" height="500" src="data/好友省份及城市分布.png"/></div>
 <div align=center><img width="900" height="500" src="data/签名词云.png"/></div>
 
@@ -33,7 +33,8 @@
  * PIL
 2. **使用说明**
  * 运行文件 [wechat_friend_wall.py](wechat_friend_wall.py)
- * 手机微信扫码并确认登录后， 再当前目录会生成照片墙图片文件[wechat_friend_wall.jpg](wechat_friend_wall.jpg)
+ * 手机微信扫码并确认登录后，程序会会将所有好友头像保存到文件夹[FriendImages](FriendImages)
+ * 最后程序从FriendImages文件夹中读取图片，并在当前目录会生成照片墙图片文件[wechat_friend_wall.jpg](wechat_friend_wall.jpg)
 <div align=center><img width="600" height="600" src="wechat_friend_wall.jpg"/></div>
 注：为保护隐私，上传的好友照片墙图片已被模糊化处理
 
