@@ -5,7 +5,7 @@ import sys,io
 from jieba_cut import seg_sentence
 
 fout1=open("wordclustering\\sourcedata\\source_file","w",encoding="UTF-8")
-fout2=open("No_NickName_Signature.txt","w")
+fout2=open("No_NickName_Signature.csv","w")
 f=open("memberList.csv",encoding="UTF-8")
 f.readline()
 lines=f.readlines()

@@ -44,7 +44,7 @@
  * 运行文件 [signature_split.py](signature_split.py)
     * 该程序读取[memberList.csv](memberList.csv)文件，并调用[jieba_cut.py](jieba_cut.py)对签名进行分词
     * [stopwords.txt](stopwords.txt)文件对jieba分词结果删除停用词处理的停用词配置文件
-    * 程序运行结果输出两个文件：[No_NickName_Signature.txt](No_NickName_Signature.txt),[wordclustering/sourcedata/source_file](wordclustering/sourcedata/source_file)
+    * 程序运行结果输出两个文件：[No_NickName_Signature.csv](No_NickName_Signature.csv),[wordclustering/sourcedata/source_file](wordclustering/sourcedata/source_file)
  * 运行文件[wordclustering/keyword.py](wordclustering/keyword.py)，注：该文件由Python2.7编写，所以请在Python2.7环境下运行。除此之外，本项目代码均采用Python3编写
     * 该程序读取[source_file](wordclustering/sourcedata/source_file)，对好友进行聚类
     * 程序运行结果在wordclustering\sourcedata目录下输出三个文件
@@ -52,7 +52,7 @@
       * [wordclustering/sourcedata/keyword](wordclustering/sourcedata/keyword): 各类别包含的主要关键词及权重
       * [wordclustering/sourcedata/result](wordclustering/sourcedata/result): 具体每个好友编号的类别归属、签名分词及主要起作用的关键词
  * 运行文件[process_clustering_results.py](process_clustering_results.py)
-    * 该程序读取[wordclustering/sourcedata/result](wordclustering/sourcedata/result)和[No_NickName_Signature.txt](No_NickName_Signature.txt)两个文件，对聚类进行整理
+    * 该程序读取[wordclustering/sourcedata/result](wordclustering/sourcedata/result)和[No_NickName_Signature.csv](No_NickName_Signature.csv)两个文件，对聚类进行整理
     * 该程序输出聚类的最终结果文件[cluster_result.txt](cluster_result.txt)
 3. **聚类结果分析**
 

@@ -15,7 +15,7 @@ for line in fin1.readlines():
 # 将同类昵称、签名放在一起
 cluster_dict={}
 cluster_dict["unknown"]=[]
-fin2=open("No_NickName_Signature.txt")
+fin2=open("No_NickName_Signature.csv")
 for line in fin2.readlines():
 	line=line.encode("gbk", "ignore").decode("gbk")
 	line=line.strip("\r\n")
