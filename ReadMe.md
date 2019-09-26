@@ -44,8 +44,8 @@
  * 运行文件 [signature_split.py](signature_split.py)
     * 该程序读取[memberList.csv](memberList.csv)文件，并调用[jieba_cut.py](jieba_cut.py)对签名进行分词
     * [stopwords.txt](stopwords.txt)文件对jieba分词结果删除停用词处理的停用词配置文件
-    * 程序运行结果输出两个文件：[No_NickName_Signature.txt][No_NickName_Signature.txt],[wordclustering/sourcedata/source_file](wordclustering/sourcedata/source_file)
- * 运行文件[wordclustering/keyword.py](wordclustering/keyword.py)
+    * 程序运行结果输出两个文件：[No_NickName_Signature.txt](No_NickName_Signature.txt),[wordclustering/sourcedata/source_file](wordclustering/sourcedata/source_file)
+ * 运行文件[wordclustering/keyword.py](wordclustering/keyword.py)，注：该文件由Python2.7编写，所以请在Python2.7环境下运行。除此之外，本项目代码均采用Python3编写
     * 该程序读取[source_file](wordclustering/sourcedata/source_file)，对好友进行聚类
     * 程序运行结果在wordclustering\sourcedata目录下输出三个文件
       * [wordclustering/sourcedata/gender](wordclustering/sourcedata/gender): 各类别的统计
@@ -56,6 +56,8 @@
     * 该程序输出聚类的最终结果文件[cluster_result.txt](cluster_result.txt)
 3. **聚类结果分析**
 
+* 聚类算法采用类似K-Means的方法进行聚类，去掉关键词权重相对太小的类别，统一放在未分类
+
 |  类别号   | 好友数  |
 |  :----:  | :----:  |
 | 0  | 34 | 
@@ -63,11 +65,12 @@
 | 2  | 20 | 
 | 3  | 29  |
 | 未分类  | 455  |
+
  * 各类别分析
     * 第0类主要是和"心"相关的
     * 第1类主要是和"爱"相关的
     * 第2类主要是和"人"相关的
     * 第3类主要是和"要"相关的
- * 能够分到类别的好友，说明有很多其他好友也有类似的签名；未分类的，要么是没有签名，要么是签名比较有自己的特色导致没有类似签名的好友。大多数好友都没有分到类别，这正是印证了圣经上的几句话：「赛53:6」 我们都如羊走迷，各人偏行己路，...
+ * 能够分到类别的好友，说明有很多其他好友也有相似的签名，具有相近的价值取向；未分到类别的，要么是没有签名，要么是签名比较有自己的特色导致没有相似签名的好友。大多数好友都没有分到类别，这正是印证了圣经上的几句话：「赛53:6」 我们都如羊走迷，各人偏行己路，...
 
 注：为保护隐私，本项目上传文件的好友昵称均用"\*\*nickName\*\*"代替
