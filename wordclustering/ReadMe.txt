@@ -1,0 +1,3 @@
+注意：
+1.将分词结果文件source_file放在sourcedata文件夹下
+2.运行结果会在sourcedata文件夹下产生3个文件：gender,keyword,result
