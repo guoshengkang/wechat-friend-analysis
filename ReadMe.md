@@ -33,7 +33,7 @@
 2. **使用说明**
  * 运行文件 [wechat_friend_wall.py](wechat_friend_wall.py)
  * 手机微信扫码并确认登录后，程序会会将所有好友头像保存到文件夹[FriendImages](FriendImages)
- * 最后程序从FriendImages文件夹中读取图片，并在当前目录会生成照片墙图片文件[wechat_friend_wall.jpg](wechat_friend_wall.jpg)
+ * 最后程序从[FriendImages](FriendImages)文件夹中读取图片，并在当前目录会生成照片墙图片文件[wechat_friend_wall.jpg](wechat_friend_wall.jpg)
 <div align=center><img width="600" height="600" src="wechat_friend_wall.jpg"/></div>
 注：为保护隐私，上传的好友照片墙图片已被模糊化处理
 
@@ -45,9 +45,9 @@
     * 该程序读取[memberList.csv](memberList.csv)文件，并调用[jieba_cut.py](jieba_cut.py)对签名进行分词
     * [stopwords.txt](stopwords.txt)文件对jieba分词结果删除停用词处理的停用词配置文件
     * 程序运行结果输出两个文件：[No_NickName_Signature.csv](No_NickName_Signature.csv),[wordclustering/sourcedata/source_file](wordclustering/sourcedata/source_file)
- * 运行文件[wordclustering/keyword.py](wordclustering/keyword.py)，注：该文件由Python2.7编写，所以请在Python2.7环境下运行。除此之外，本项目代码均采用Python3编写
+ * 运行文件[wordclustering/keyword.py](wordclustering/keyword.py)，**注**：该文件由Python2.7编写，所以请在Python2.7环境下运行。除此之外，本项目代码均采用Python3编写
     * 该程序读取[source_file](wordclustering/sourcedata/source_file)，对好友进行聚类
-    * 程序运行结果在wordclustering\sourcedata目录下输出三个文件
+    * 程序运行结果在[wordclustering/sourcedata](wordclustering/sourcedata)目录下输出三个文件
       * [wordclustering/sourcedata/gender](wordclustering/sourcedata/gender): 各类别的统计
       * [wordclustering/sourcedata/keyword](wordclustering/sourcedata/keyword): 各类别包含的主要关键词及权重
       * [wordclustering/sourcedata/result](wordclustering/sourcedata/result): 具体每个好友编号的类别归属、签名分词及主要起作用的关键词
@@ -56,7 +56,7 @@
     * 该程序输出聚类的最终结果文件[cluster_result.txt](cluster_result.txt)
 3. **聚类结果分析**
 
-* 聚类算法采用类似K-Means的方法进行聚类，去掉关键词权重相对太小的类别，统一放在未分类
+* 聚类算法采用类似**K-Means**的方法进行聚类，去掉关键词权重相对太小的类别，统一放在未分类
 
 |  类别号   | 好友数  |
 |  :----:  | :----:  |
@@ -67,10 +67,10 @@
 | 未分类  | 455  |
 
  * 各类别分析：参见结果文件[cluster_result.txt](cluster_result.txt)
-    * 第0类主要是和"心"相关的
-    * 第1类主要是和"爱"相关的
-    * 第2类主要是和"人"相关的
-    * 第3类主要是和"要"相关的
+    * 第0类主要是和"**心**"相关的
+    * 第1类主要是和"**爱**"相关的
+    * 第2类主要是和"**人**"相关的
+    * 第3类主要是和"**要**"相关的
  * 能够分到类别的好友，说明有很多其他好友也有相似的签名，具有相近的价值取向；未分到类别的，要么是没有签名，要么是签名比较有自己的特色导致没有相似签名的好友。大多数好友都没有分到类别，这正是印证了圣经上的一句话：*「赛53:6」 我们都如羊走迷，各人偏行己路，...*
 
 注：为保护隐私，本项目上传文件的好友昵称均用"\*\*nickName\*\*"代替
