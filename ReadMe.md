@@ -22,3 +22,6 @@
 | 。。。  |。。。  |。。。  |。。。  |。。。  |
 
  * 运行结果会弹出3张图：好友性别分布的饼图、好友省份及城市分布的柱状图、好友签名的词云图
+<div align=center><img width="400" height="200" src="data/好友性别分布.png"/></div>
+<div align=center><img width="400" height="200" src="data/好友省份及城市分布.png"/></div>
+<div align=center><img width="400" height="200" src="data/签名词云.png"/></div>
